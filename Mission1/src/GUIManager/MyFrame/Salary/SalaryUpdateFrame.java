@@ -37,7 +37,7 @@ public class SalaryUpdateFrame extends JFrame {
 
     public SalaryUpdateFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ImageIcon icon=new ImageIcon("Mission1/pic/p3.jpg");
+        ImageIcon icon=new ImageIcon("G:\\Mission\\Mission1\\pic\\p3.jpg");
         JLabel label = new JLabel(icon);//往一个标签中加入图片
         label.setBounds(0, 0, icon.getIconWidth(),icon.getIconHeight());//设置标签位置大小为图片大小
         this.getLayeredPane().add(label, Integer.valueOf(Integer.MIN_VALUE));//标签添加到第二层面板

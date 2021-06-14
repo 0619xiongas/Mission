@@ -11,11 +11,11 @@ import UserData.SalaryGrade;
 import UserData.VariableWage;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.Collections;
-import java.util.Comparator;
+
 import java.util.List;
 
 public class PersonFrame extends JFrame {

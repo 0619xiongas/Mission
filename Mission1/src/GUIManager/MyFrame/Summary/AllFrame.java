@@ -3,7 +3,6 @@ package GUIManager.MyFrame.Summary;
 
 import GUIManager.AllDialog.OutOrNotDialog;
 import GUIManager.MyFrame.ChoiceFrame;
-import IOUtils.SummaryIO;
 import JDBCUtils.EmployeeUtils;
 import JDBCUtils.SGUtils;
 import JDBCUtils.VWUtils;
@@ -13,7 +12,6 @@ import UserData.UserBean;
 import UserData.VariableWage;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.*;

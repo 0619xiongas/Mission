@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8197f61a-8397-4e6d-846a-6cd421b622c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/lib__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/libs__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mission.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mission.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/MigLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/MigLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_23.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/smartfox_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-core-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-core-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-swing-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-swing-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/miglayout-swing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/IO/SalaryGrade.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/IO/Summary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/IO/VariableWage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/IO/employee.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.23.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.23.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/AllDialog/ChoiceDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/AllDialog/MyDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/AllDialog/OutOrNotDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/GUIUtils/FontHint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/ChoiceFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Employee/EmployeeAddFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Employee/EmployeeLookFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Employee/EmployeeRemoveFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Employee/EmployeeUpdateFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/EmployeeFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/LoginFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/LoginFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Salary/SalaryAddFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Salary/SalaryLookFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Salary/SalaryRemoveFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Salary/SalaryUpdateFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/SalaryFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/SalaryLel/SalaryLevelAddFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/SalaryLel/SalaryLevelLookFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/SalaryLel/SalaryLevelUpdateFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/SalaryLelFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Summary/AllFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/GUIManager/MyFrame/Summary/PersonFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/IOUtils/EmployeeIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/IOUtils/SalaryGradeIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/IOUtils/SummaryIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/IOUtils/VariableWageIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/JDBCUtils/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/JDBCUtils/EmployeeUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/JDBCUtils/JDBCUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/JDBCUtils/SGUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/JDBCUtils/VWUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/MyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/UserData/Employees.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/UserData/LoginUsers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/UserData/SalaryGrade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/UserData/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/UserData/VariableWage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mission1/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mission1/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/Employee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/Employee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/choice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/choice.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/level.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/level.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/login.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/p2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/p2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/p3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/p3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/p4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/p4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/person.png" beforeDir="false" afterPath="$PROJECT_DIR$/pic/person.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/salary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/salary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUIManager/MyFrame/Summary/AllFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUIManager/MyFrame/Summary/AllFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUIManager/MyFrame/Summary/PersonFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUIManager/MyFrame/Summary/PersonFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOUtils/EmployeeIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOUtils/SalaryGradeIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOUtils/SummaryIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOUtils/VariableWageIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JDBCUtils/Constants.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1twaaMbVp7bKV04QEdu9yyMq3NU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8197f61a-8397-4e6d-846a-6cd421b622c3" name="Default Changelist" comment="" />
+      <created>1623682668582</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623682668582</updated>
+      <workItem from="1623682672962" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
