@@ -205,6 +205,7 @@ public class EmployeeUpdateFrame extends JFrame {
             e = EmployeeUtils.SearchEmployee(id.getText().trim());
             if (e.getId() == null) {
                 new MyDialog("无此人的消息，请重新输入或者退出");
+
             } else {
                 name.setText(e.getName());
                 salaryLevel.setSelectedItem(e.getSalaryLevel());

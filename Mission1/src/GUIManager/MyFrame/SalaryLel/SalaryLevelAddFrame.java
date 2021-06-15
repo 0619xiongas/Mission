@@ -135,6 +135,7 @@ public class SalaryLevelAddFrame extends JFrame {
                 new MyDialog("请完善信息");
             }else{
                 addNewLevel();
+                clean();
             }
         });
 
@@ -193,6 +194,12 @@ public class SalaryLevelAddFrame extends JFrame {
         }else{
             return false;
         }
+    }
+    public void clean(){
+        salaryLel.addFocusListener(new FontHint("等级1,2,3....", salaryLel));
+        jobSalary.addFocusListener(new FontHint("...元", jobSalary));
+        trafficSalary.addFocusListener(new FontHint("...元", trafficSalary));
+        basicSalary.addFocusListener(new FontHint("...元",basicSalary));
     }
 
     public static void main(String[] args) {

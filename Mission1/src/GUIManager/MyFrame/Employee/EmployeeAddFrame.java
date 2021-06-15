@@ -194,11 +194,13 @@ public class EmployeeAddFrame extends JFrame {
             Employees e = EmployeeUtils.SearchEmployee(id.getText().trim());
             if (e.equals(emp)) {
                 new MyDialog("录入信息成功");
+                clean();
             } else {
                 new MyDialog("录入信息失败,请重新录入");
             }
         } else {
             new MyDialog("此id已经被使用，请输入其他的id。");
+            id.setText("");
         }
     }
 
@@ -249,6 +251,13 @@ public class EmployeeAddFrame extends JFrame {
         } else {
             return false;
         }
+    }
+
+    public void clean(){
+        id.addFocusListener(new FontHint("电话/邮箱...", id));
+        name.addFocusListener(new FontHint("你的名字", name));
+        startDate.addFocusListener(new FontHint("初始年月", startDate));
+        salaryLevel.setSelectedIndex(0);
     }
 
     public static void main(String[] args) {

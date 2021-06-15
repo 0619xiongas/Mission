@@ -158,6 +158,11 @@ public class EmployeeLookFrame extends JFrame {
             e = EmployeeUtils.SearchEmployee(id.getText().trim());
             if (e.getId() == null) {
                 MyDialog dialog = new MyDialog("无此职工的信息，是否添加?");
+                name.setText("");
+                startDate.setText("");
+                salaryLevel.setText("");
+                btn_girl.setSelected(false);
+                btn_boy.setSelected(false);
                 dialog.getOkButton().addActionListener(e1->{
                     this.dispose();
                     new EmployeeAddFrame();

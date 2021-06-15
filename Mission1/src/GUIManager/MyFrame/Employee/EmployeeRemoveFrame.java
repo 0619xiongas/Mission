@@ -156,7 +156,7 @@ public class EmployeeRemoveFrame extends JFrame {
             findUser();
         });
         btnRemove.addActionListener(e->{
-            MyDialog dialog = new MyDialog("此操作也会对变动工资信息进行相关删除，是否删除？");
+            MyDialog dialog = new MyDialog("此操作也会影响到变动工资信息，是否删除？");
             dialog.getOkButton().addActionListener(e1->{
                 SubUser();
                 clean();

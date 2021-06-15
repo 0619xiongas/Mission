@@ -152,6 +152,7 @@ public class SalaryAddFrame extends JFrame {
                     if (!judgeMonth()) {
                         if((Month>=1&&Month<=12)) {
                             addSalary();
+                            clean();
                         }else{
                             new MyDialog("请输入正确的月份");
                         }
@@ -199,6 +200,17 @@ public class SalaryAddFrame extends JFrame {
             }
         }
         return false;
+    }
+
+    public void clean(){
+        id.addFocusListener(new FontHint("电话/邮箱...", id));
+        month.setSelectedIndex(0);
+        reward.addFocusListener(new FontHint("...元", reward));
+        fine.addFocusListener(new FontHint("...元", fine));
+    }
+
+    public static void main(String[] args) {
+        new SalaryAddFrame();
     }
 }
 

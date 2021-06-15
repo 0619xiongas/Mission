@@ -116,7 +116,12 @@ public class PersonFrame extends JFrame {
         btnConfirm.addActionListener(e->{
             if(judge()) {
                 textArea.setText("id\t姓名\t性别\t初始年月\t工资等级\t基础工资\t岗位工资\t交通补贴\t月份\t奖励\t罚款\t总和\n");
-                showInfo();
+                getSalary();
+                if(mlist.size()==0){
+                    new MyDialog("此id的工资数据为0条");
+                }else {
+                    showInfo();
+                }
             }else {
                 new MyDialog("输入的id不出存在，请检查");
             }
@@ -159,7 +164,6 @@ public class PersonFrame extends JFrame {
     public void showInfo(){
         getEmployee();
         getLevel();
-        getSalary();
         double averageSalary = 0;
         for(int i=0;i<mlist.size();i++){
             double finalSalary = level.getBasicSalary()+level.getJobSalary()+level.getTrafficSalary()+mlist.get(i).getRewardSalary()-mlist.get(i).getFine();

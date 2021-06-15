@@ -123,6 +123,7 @@ public class SalaryUpdateFrame extends JFrame {
         btnUpdate = new JButton("修改");
         btnUpdate.setOpaque(false);
         btnUpdate.setBounds(28, 205, 97, 23);
+        btnUpdate.setEnabled(false);
         p1.add(btnUpdate);
 
         JLabel lblNewLabel_3 = new JLabel("输入月份");
@@ -177,6 +178,7 @@ public class SalaryUpdateFrame extends JFrame {
                     if(getNow()) {
                         fine.setText(String.valueOf(v1.getFine()));
                         reward.setText(String.valueOf(v1.getRewardSalary()));
+                        btnUpdate.setEnabled(true);
                     }else{
                         new MyDialog("请仔细检查有无此月份的信息");
                     }
@@ -192,10 +194,17 @@ public class SalaryUpdateFrame extends JFrame {
                         UpdateSalary();
                         textArea.setText("");
                         getSalary();
+                        btnUpdate.setEnabled(false);
                     }
                 }
             }else{
-                new MyDialog("无此月的信息，无法删除");
+                MyDialog dialog = new MyDialog("无此月的信息，无法修改");
+                dialog.getOkButton().addActionListener(e1->{
+                    btnUpdate.setEnabled(false);
+                });
+                dialog.getCancelButton().addActionListener(e2->{
+                    btnUpdate.setEnabled(false);
+                });
             }
         });
     }
