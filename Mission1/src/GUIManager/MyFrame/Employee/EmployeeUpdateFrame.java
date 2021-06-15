@@ -178,6 +178,12 @@ public class EmployeeUpdateFrame extends JFrame {
             if(empBefore.equals(empAfter)){
                 new MyDialog("你尚未修改信息");
                 flag = false;
+            }else if(name.getText().equals("你的名字")||startDate.getText().equals("初始年月")){
+                new MyDialog("请完善你的信息");
+                flag = false;
+            }else if(!id.getText().equals(empBefore.getId())){
+                new MyDialog("你无法更改你的id号");
+                flag =false;
             }
             if(flag) {
                 if (getNewId(id.getText().trim())) {
@@ -186,8 +192,6 @@ public class EmployeeUpdateFrame extends JFrame {
                     if (emp.equals(empAfter)) {
                         new MyDialog("修改成功!");
                     }
-                }else{
-                    new MyDialog("你输入的id号已经存在,请换一个.");
                 }
             }
         });
@@ -269,6 +273,7 @@ public class EmployeeUpdateFrame extends JFrame {
             return false;
         }
     }
+
 
     public static void main(String[] args) {
         new EmployeeUpdateFrame();

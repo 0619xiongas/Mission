@@ -156,7 +156,6 @@ public class SalaryUpdateFrame extends JFrame {
 
         btnOk.addActionListener(e->{
             if (judge(id.getText().trim())) {
-                textArea.setText("id\t月份\t奖励\t罚款\n");
                 getSalary();
                 p1.setVisible(true);
             } else {
@@ -186,8 +185,14 @@ public class SalaryUpdateFrame extends JFrame {
         });
         btnUpdate.addActionListener(e->{
             if(judgeMonth()){
-                if(judgeModify()) {
-                    UpdateSalary();
+                if(fine.getText().equals("")||reward.getText().equals("")){
+                    new MyDialog("请完善你的信息");
+                }else {
+                    if (judgeModify()) {
+                        UpdateSalary();
+                        textArea.setText("");
+                        getSalary();
+                    }
                 }
             }else{
                 new MyDialog("无此月的信息，无法删除");
@@ -200,6 +205,7 @@ public class SalaryUpdateFrame extends JFrame {
         if (list.size() == 0) {
             new MyDialog("此职员的变动工资信息条数为0");
         } else {
+            textArea.setText("id\t月份\t奖励\t罚款\n");
             for (int i = 0; i < list.size(); i++) {
                 VariableWage v = list.get(i);
                 textArea.append(v.getEmployee_id() + "\t" + v.getMonth() + "\t" + v.getRewardSalary() + "\t" + v.getFine() + "\n");
@@ -249,11 +255,11 @@ public class SalaryUpdateFrame extends JFrame {
             }
         }
         if(v2.getRewardSalary() == Double.parseDouble(reward.getText().trim())
-                && v2.getFine() == Double.parseDouble(fine.getText().trim()
-        )){
+                && v2.getFine() == Double.parseDouble(fine.getText().trim())){
             new MyDialog("未改动信息,保存原有信息");
             return false;
         }
+
         return true;
     }
 

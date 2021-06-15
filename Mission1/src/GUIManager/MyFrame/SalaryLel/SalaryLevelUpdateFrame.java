@@ -144,14 +144,17 @@ public class SalaryLevelUpdateFrame extends JFrame {
         });
 
         btnUpdate.addActionListener(e->{
-            showFun();
             boolean f = true;
-            if(sgBefore.equals(sgAfter)){
-                new MyDialog("你尚未修改信息");
+            if(jobSalary.getText().equals("")||trafficSalary.getText().equals("")||basicSalary.getText().equals("")) {
+                new MyDialog("请完善工资等级的信息");
+                if (sgBefore.equals(sgAfter)) {
+                    new MyDialog("你尚未修改信息");
+                }
                 f = false;
             }
             if(f){
                 UpdateLevel();
+                showFun();
                 SalaryGrade s = SGUtils.SearchSLel(salaryLel.getSelectedIndex()+"");
                 if(s.equals(sgAfter)){
                     new MyDialog("修改成功");
