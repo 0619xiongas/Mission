@@ -167,7 +167,7 @@ public class SalaryAddFrame extends JFrame {
     public void addSalary() {
         vw = new VariableWage();
         vw.setEmployee_id(id.getText().trim());
-        vw.setMonth(Integer.parseInt(month.getSelectedIndex()+1+""));
+        vw.setMonth(Integer.parseInt(month.getSelectedIndex()+""));
         vw.setRewardSalary(Double.parseDouble(reward.getText().trim()));
         vw.setFine(Double.parseDouble(fine.getText().trim()));
         VWUtils.AddNewVWSalary(vw);

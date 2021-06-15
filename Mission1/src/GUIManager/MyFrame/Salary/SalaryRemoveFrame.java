@@ -128,7 +128,6 @@ public class SalaryRemoveFrame extends JFrame {
 
         btnOk.addActionListener(e -> {
             if (judge(id.getText().trim())) {
-                textArea.setText("id\t月份\t奖励\t罚款\n");
                 getSalary();
                 myshow();
             } else {
@@ -143,6 +142,7 @@ public class SalaryRemoveFrame extends JFrame {
         btnRemove.addActionListener(e -> {
             if(judgeMonth()) {
                 RemoveSalary(id.getText().trim(), Month);
+                getSalary();
             }
             else{
                 new MyDialog("无此月的信息，无法删除");
@@ -183,6 +183,7 @@ public class SalaryRemoveFrame extends JFrame {
         if (list.size() == 0) {
             new MyDialog("此职员的变动工资信息条数为0");
         } else {
+            textArea.setText("id\t月份\t奖励\t罚款\n");
             for (int i = 0; i < list.size(); i++) {
                 VariableWage v = list.get(i);
                 textArea.append(v.getEmployee_id() + "\t" + v.getMonth() + "\t" + v.getRewardSalary() + "\t" + v.getFine() + "\n");
