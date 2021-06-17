@@ -10,6 +10,7 @@ import UserData.SalaryGrade;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.List;
 
 public class SalaryLevelLookFrame extends JFrame {
 
@@ -21,10 +22,10 @@ public class SalaryLevelLookFrame extends JFrame {
     private JTextField basicSalary;
     private JTextField jobSalary;
     private JTextField trafficSalary;
-    private int levelSize;
+    private List<String> list;
 
     public SalaryLevelLookFrame() {
-        levelSize = SGUtils.getSize();
+      list = SGUtils.getSize();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon icon=new ImageIcon("Mission1/pic/p4.jpg");
@@ -68,13 +69,10 @@ public class SalaryLevelLookFrame extends JFrame {
 
         salaryLel = new JComboBox();
         salaryLel.setOpaque(false);
-        for(int i=0;i<=levelSize;i++){
-            if(i==0){
-                salaryLel.addItem("选择等级");
-            }else {
-                salaryLel.addItem(i+"");
+        salaryLel.addItem("选择等级");
+        for(int i=0;i<list.size();i++){
+                salaryLel.addItem(list.get(i));
             }
-        }
         salaryLel.setBounds(160, 60, 155, 21);
         contentPane.add(salaryLel);
 

@@ -7,8 +7,8 @@ import JDBCUtils.SGUtils;
 import UserData.SalaryGrade;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.List;
 
 public class SalaryLevelUpdateFrame extends JFrame {
 
@@ -21,13 +21,13 @@ public class SalaryLevelUpdateFrame extends JFrame {
     private JTextField basicSalary;
     private JTextField jobSalary;
     private JTextField trafficSalary;
-    private int levelSize;
+    private List<String> list;
 
     private SalaryGrade sgBefore;
     private SalaryGrade sgAfter;
 
     public SalaryLevelUpdateFrame() {
-        levelSize = SGUtils.getSize();
+        list = SGUtils.getSize();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon icon=new ImageIcon("Mission1/pic/p4.jpg");
         JLabel label = new JLabel(icon);//往一个标签中加入图片
@@ -70,12 +70,9 @@ public class SalaryLevelUpdateFrame extends JFrame {
 
         salaryLel = new JComboBox();
         salaryLel.setOpaque(false);
-        for(int i=0;i<=levelSize;i++){
-            if(i==0){
-                salaryLel.addItem("选择等级");
-            }else {
-                salaryLel.addItem(i+"");
-            }
+        salaryLel.addItem("选择等级");
+        for(int i=0;i<list.size();i++){
+                salaryLel.addItem(list.get(i));
         }
         salaryLel.setBounds(160, 60, 155, 21);
         contentPane.add(salaryLel);
@@ -155,7 +152,7 @@ public class SalaryLevelUpdateFrame extends JFrame {
             if(f){
                 UpdateLevel();
                 showFun();
-                SalaryGrade s = SGUtils.SearchSLel(salaryLel.getSelectedIndex()+"");
+                SalaryGrade s = SGUtils.SearchSLel(salaryLel.getSelectedItem().toString());
                 if(s.equals(sgAfter)){
                     new MyDialog("修改成功");
                     salaryLel.setEditable(true);
@@ -168,7 +165,7 @@ public class SalaryLevelUpdateFrame extends JFrame {
         if(salaryLel.getSelectedIndex() == 0){
             new MyDialog("请选择等级");
         }else {
-            s = SGUtils.SearchSLel(salaryLel.getSelectedIndex()+"");
+            s = SGUtils.SearchSLel(salaryLel.getSelectedItem().toString());
             if(s.getSalaryLevel() == null){
                 new MyDialog("无此工资等级的信息，请重新输入");
             }else {
@@ -199,7 +196,7 @@ public class SalaryLevelUpdateFrame extends JFrame {
 
     public void showFun(){
         sgAfter = new SalaryGrade();
-        sgAfter.setSalaryLevel(salaryLel.getSelectedIndex()+"");
+        sgAfter.setSalaryLevel(salaryLel.getSelectedItem().toString());
         sgAfter.setJobSalary(Double.parseDouble(jobSalary.getText().trim()));
         sgAfter.setBasicSalary(Double.parseDouble(basicSalary.getText().trim()));
         sgAfter.setTrafficSalary(Double.parseDouble(trafficSalary.getText().trim()));

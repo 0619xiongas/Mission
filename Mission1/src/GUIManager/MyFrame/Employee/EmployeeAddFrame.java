@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.List;
 
 public class EmployeeAddFrame extends JFrame {
 
@@ -29,7 +30,7 @@ public class EmployeeAddFrame extends JFrame {
     private JComboBox salaryLevel;
     private Employees emp;
 
-    private int levelSize;
+    private List<String> list;
 
     private static final String PROMPT_ID = "电话/邮箱...";
     private static final String PROMPT_NAME = "你的名字";
@@ -37,7 +38,7 @@ public class EmployeeAddFrame extends JFrame {
     private static final String PROMPT_DATE = "初始年月";
 
     public EmployeeAddFrame() {
-        levelSize = SGUtils.getSize();
+        list = SGUtils.getSize();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon icon=new ImageIcon("Mission1/pic/p1.jpg");
         JLabel label = new JLabel(icon);//往一个标签中加入图片
@@ -127,12 +128,9 @@ public class EmployeeAddFrame extends JFrame {
         salaryLevel = new JComboBox();
         salaryLevel.setOpaque(false);
         salaryLevel.setBounds(139, 275, 155, 21);
-        for (int i = 0; i <= levelSize; i++) {
-            if (i == 0) {
-                salaryLevel.addItem(PROMPT_LEVEL);
-            } else {
-                salaryLevel.addItem(i + "");
-            }
+        salaryLevel.addItem(PROMPT_LEVEL);
+        for (int i = 0; i < list.size(); i++) {
+                salaryLevel.addItem(list.get(i));
         }
         contentPane.add(salaryLevel);
 
@@ -189,7 +187,7 @@ public class EmployeeAddFrame extends JFrame {
                 this.emp.setSex("女");
             }
             this.emp.setStartDate(startDate.getText().trim());
-            this.emp.setSalaryLevel(salaryLevel.getSelectedIndex()+ "");
+            this.emp.setSalaryLevel(salaryLevel.getSelectedItem().toString());
             EmployeeUtils.AddEmployee(emp);
             Employees e = EmployeeUtils.SearchEmployee(id.getText().trim());
             if (e.equals(emp)) {

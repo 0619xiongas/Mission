@@ -10,6 +10,7 @@ import UserData.Employees;
 import UserData.SalaryGrade;
 
 import java.awt.*;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
@@ -25,14 +26,14 @@ public class EmployeeUpdateFrame extends JFrame {
     private JTextField startDate;
     private JComboBox salaryLevel;
     private JButton btnUpdate;
-    private int levelSize;
+    private List<String> list;
 
     private Employees empBefore;
     private Employees empAfter;
 
 
     public EmployeeUpdateFrame() {
-        levelSize = SGUtils.getSize();
+       list = SGUtils.getSize();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon icon=new ImageIcon("Mission1/pic/p1.jpg");
         JLabel label = new JLabel(icon);//往一个标签中加入图片
@@ -92,8 +93,8 @@ public class EmployeeUpdateFrame extends JFrame {
 
         name = new JTextField();
         name.setOpaque(false);
-        name.setForeground(Color.RED);
-        name.addFocusListener(new FontHint("你的名字", name));
+        name.setForeground(Color.BLACK);
+       // name.addFocusListener(new FontHint("你的名字", name));
         name.setBounds(139, 100, 155, 21);
         contentPane.add(name);
         name.setColumns(10);
@@ -114,8 +115,7 @@ public class EmployeeUpdateFrame extends JFrame {
 
         startDate = new JTextField();
         startDate.setOpaque(false);
-        startDate.setForeground(Color.BLACK);
-        startDate.addFocusListener(new FontHint("初始年月", startDate));
+       // startDate.addFocusListener(new FontHint("初始年月", startDate));
         startDate.setBounds(139, 205, 155, 21);
         contentPane.add(startDate);
         startDate.setColumns(10);
@@ -123,8 +123,8 @@ public class EmployeeUpdateFrame extends JFrame {
         salaryLevel = new JComboBox();
         salaryLevel.setOpaque(false);
         salaryLevel.setBounds(139, 275, 155, 21);
-        for (int i = 1; i <= levelSize; i++) {
-                salaryLevel.addItem(i + "");
+        for (int i = 0; i < list.size(); i++) {
+                salaryLevel.addItem(list.get(i));
         }
         contentPane.add(salaryLevel);
 
@@ -228,7 +228,7 @@ public class EmployeeUpdateFrame extends JFrame {
         String id,name,sex,level,date;
         id = this.id.getText().trim();
         name = this.name.getText().trim();
-        level = this.salaryLevel.getSelectedIndex()+1+"";
+        level = this.salaryLevel.getSelectedItem().toString();
         date = this.startDate.getText().trim();
         if(btn_boy.isSelected()){
             sex = "男";
@@ -256,7 +256,7 @@ public class EmployeeUpdateFrame extends JFrame {
         empAfter = new Employees();
         empAfter.setId(id.getText().trim());
         empAfter.setName(name.getText().trim());
-        empAfter.setSalaryLevel(salaryLevel.getSelectedIndex()+1+"");
+        empAfter.setSalaryLevel(salaryLevel.getSelectedItem().toString());
         empAfter.setStartDate(startDate.getText().trim());
         if(btn_boy.isSelected()){
             empAfter.setSex("男");

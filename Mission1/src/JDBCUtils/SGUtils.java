@@ -6,6 +6,7 @@ import UserData.*;
 import javax.print.DocFlavor;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -113,9 +114,9 @@ public class SGUtils {
         return list;
     }
 
-    public static int getSize(){
-        int i = 0;
-        String sql = "select * from salaryLel";
+    public static List<String> getSize(){
+        List<String> list = new ArrayList<>();
+        String sql = "select levels from salaryLel";
         Connection conn = null;
         Statement stmt = null;
         ResultSet res = null;
@@ -124,13 +125,23 @@ public class SGUtils {
             stmt = conn.createStatement();
             res = stmt.executeQuery(sql);
             while(res.next()){
-                i = res.getInt(1);
+                list.add(res.getString(1));
             }
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
             JDBCUtils.free(conn,stmt,res);
         }
-        return i;
+        Collections.sort(list,(o1,o2)->{
+            if(Integer.parseInt(o1) > Integer.parseInt(o2)){
+                return 1;
+            }else if(Integer.parseInt(o1) == Integer.parseInt((o2))){
+                return 0;
+            }else{
+                return -1;
+            }
+        });
+        return list;
     }
+
 }

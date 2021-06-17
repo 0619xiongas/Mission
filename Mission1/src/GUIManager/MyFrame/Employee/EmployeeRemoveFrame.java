@@ -122,6 +122,7 @@ public class EmployeeRemoveFrame extends JFrame {
         contentPane.add(btnBack);
 
         btnRemove = new JButton("删除");
+        btnRemove.setEnabled(false);
         btnRemove.setBounds(112, 353, 60, 23);
         contentPane.add(btnRemove);
 
@@ -190,11 +191,14 @@ public class EmployeeRemoveFrame extends JFrame {
         Employees e;
         if (id.getText().trim().equals("")) {
             new MyDialog("请输入id");
+            btnRemove.setEnabled(false);
         } else {
             e = EmployeeUtils.SearchEmployee(id.getText().trim());
             if (e.getId() == null) {
                 new MyDialog("无此人的消息，请重新输入或者退出");
+                btnRemove.setEnabled(false);
             } else {
+                btnRemove.setEnabled(true);
                 name.setText(e.getName());
                 salaryLevel.setText(e.getSalaryLevel());
                 startDate.setText(e.getStartDate());
@@ -213,6 +217,7 @@ public class EmployeeRemoveFrame extends JFrame {
         startDate.setText("");
         btn_boy.setSelected(false);
         btn_girl.setSelected(false);
+        btnRemove.setEnabled(false);
     }
 
     public static void main(String[] args) {
