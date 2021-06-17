@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class MyApplication {
     public static void main(String[] args) {
-        new MP3Player("G:\\Mission\\Mission1\\song\\mel.wav").run();
+        //new MP3Player("G:\\Mission\\Mission1\\song\\mel.wav").run();
         new LoginFrame();
         List<String> list = SGUtils.getSize();
     }

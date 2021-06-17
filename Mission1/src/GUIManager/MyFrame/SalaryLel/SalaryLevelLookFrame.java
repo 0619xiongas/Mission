@@ -138,7 +138,7 @@ public class SalaryLevelLookFrame extends JFrame {
         if(salaryLel.getSelectedIndex() == 0){
             new MyDialog("请输入等级");
         }else{
-            sg = SGUtils.SearchSLel(salaryLel.getSelectedIndex()+"");
+            sg = SGUtils.SearchSLel(salaryLel.getSelectedItem().toString());
             if(sg.getSalaryLevel() == null){
                 MyDialog dialog = new MyDialog("没有此等级的详细信息，是否添加？");
                 dialog.getOkButton().addActionListener(e1->{
